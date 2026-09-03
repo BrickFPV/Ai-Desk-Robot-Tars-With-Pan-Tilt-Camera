@@ -19,9 +19,31 @@ I wanted to create a desk robot that you can ask things, chat with it, ask what 
 
 ## **Setting Up The Chasis**
 
+<img width="420" height="!" alt="legorender" src="https://github.com/user-attachments/assets/e2fe6531-cd35-4d9e-a010-e4baa86854f8" />
+<img width="420" height="!" alt="legorender_2" src="https://github.com/user-attachments/assets/810e7104-c8d6-46bc-bbe6-3b5d9354e125" />
+<img width="300" height="!" alt="legorender_3" src="https://github.com/user-attachments/assets/b466c017-e3d9-4b64-bd99-c0494d99b106" />
 
-First, you need to download and 3D print the stl files with PLA on /dowloadables/3dprint folder.
-  
+
+
+
+### Step 1: 3D printing and making the servo to be able to connect with lego
+First, you need to download and 3D print the stl files (print both of them atleast 2 times because you have two servos with PLA on /dowloadables/3dprint folder.
+After that, you have to screw both the servos to the SG90 shell using the small screws you get when buying a sg90 servo motor.(Make sure the output side on the servo is next to the 2 holes)
+Then, put some super glue on the SG90 to lego's middle hole on the side where you can put it to sg90's output. after you put some super glue in the hole, put the Sg90-lego adapter(middle hole where you put glue on) to servo's output. Make sure to not push too much as if the glue touches the blue servo motor case, it might glue the motor output and the case and make it not moveable.
+
+<img width="400" height="!" alt="13336" src="https://github.com/user-attachments/assets/f285278d-41b1-4992-abe0-5b6f680de8a7" />
+<img width="400" height="!" alt="13337" src="https://github.com/user-attachments/assets/42ac4648-6d5b-41ff-ae15-c786237ed854" /> 
+<img width="400" height="!" alt="Adsız" src="https://github.com/user-attachments/assets/0f758fde-3636-46c1-8b29-85a202d0fdaf" />
+
+
+### Step 2: Building the chasis
+
+
+
+
+
+
+
 
 
 
@@ -90,7 +112,7 @@ If the potentiometer on the MT3608 doesn't change the output voltage, add a sold
 <img width="890" height="442" alt="mt fix" src="https://github.com/user-attachments/assets/506ada10-7514-42bf-a105-8146ea34c411" />
 
 
-##Setup##
+## Setup
 
 
 
