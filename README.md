@@ -1,8 +1,8 @@
-# Ai-Desk-Robot-Tars-With-Pan-Tilt-Camera
+# Tars AI Desk Robot
 I wanted to create a desk robot that you can ask things, chat with it, ask what is going on with the enviroment via camera that he can look around with 2 servos. And here it is. I didn't made a 3d printed case for it, I used lego technic to make a chasis. I am planing to share the lego file soon. Now, here is step by step guide on how to make this robot:
 
 
-**Needed Hardware:**
+## **🔌 Needed Hardware**
 
 - Raspberry Pi 4 1gb(Any other raspberry pi with atleast 1gb ram should work)
 - Logitech web cam(C270 to be exact but you can use any webcam that has a mic.)
@@ -14,21 +14,21 @@ I wanted to create a desk robot that you can ask things, chat with it, ask what 
 - Small speaker for the amp
 
 
-**How to fix MT3608**
+## **🔧 How to fix MT3608**
 
 If the potentiometer on the MT3608 doesn't change the output voltage, add a solder bridge at the back of the board as shown on the picture.
 
 <img width="890" height="442" alt="mt fix" src="https://github.com/user-attachments/assets/506ada10-7514-42bf-a105-8146ea34c411" />
 
 
-**Wiring**
+## **🪛 Wiring**
 
 Here is the Raspberry pi 4 pinout to make things easier.
 <img width="2064" height="1185" alt="GPIO-Pinout-Diagram-2" src="https://github.com/user-attachments/assets/fa54dea6-1ea0-4ec2-be7b-4d2bfb1a8ce0" />
 
 First, just like in any other project, wire GND(PIN 6) to a power rail.
 
-The wiring for MAX98357a will be like this:
+### The wiring for MAX98357a will be like this:
 
 Vin ------ PIN 2(5V power)
 
@@ -48,7 +48,7 @@ Output + = Speaker +
 
 Output - = Speaker -
 
----------------------The wiring for PCA9685:-------------------------
+### ---------------------The wiring for PCA9685:-------------------------
 
  Gnd ----- Gnd power rail
  
@@ -67,9 +67,10 @@ Output - = Speaker -
  **IMPORTANT: DO NOT WIRE THE POWER TERMINALS DIRECTLY TO 5V POWER ON RASPBERRY PI AS IT WILL DRAW TOO MUCH POWER AND MAY BURN YOUR BOARD**
 
  Pan Servo motor = The 3 pins on the very left(Match the colors)
+ 
  Tilt Servo motor = The 3 pins right next to the pan servo motor pins(Match the colors)<img width="1001" height="1001" alt="servo" src="https://github.com/user-attachments/assets/ac3df470-3039-435e-bc2c-a505fe9639f5" />
 
 
- ----------------------Wiring for the usb webcam---------------
+ ### ----------------------📷 Wiring for the usb webcam---------------
 
  Just plug it to the raspberry pi :)
