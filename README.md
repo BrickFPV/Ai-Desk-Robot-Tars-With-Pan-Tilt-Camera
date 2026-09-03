@@ -12,6 +12,7 @@ I wanted to create a desk robot that you can ask things, chat with it, ask what 
 - MT3608(set the output to 5/5,1 volts) if you are using a lipo or 18650 because they output 4.2V max.(Look at **How to fix MT3608** part if the potentiometer on the board doesn't change the output voltage)
 - MAX98357A amplifier
 - Small speaker for the amp
+- Breadboard
 - 3D printed parts. Download links will be in the **Downloadables** folder.
 - Lego techinc to make the chasis. The lego model will be in the **Downloadables** folder. (i would be pleased if someone makes a 3d printed chasis)
 
@@ -37,6 +38,34 @@ Then, put some super glue on the SG90 to lego's middle hole on the side where yo
 
 
 ### Step 2: Building the chasis
+
+Download the lego.io file on /downloadables folder. Also, download Studio 2.0 from bricklink's official website: https://store.bricklink.com/v2/studio/download.page
+You can look at the model there and improvise. You don't need to make the same thing. After making the chasis, and pan/tilt sections, fix the webcam on top of the pan section with rubber bands like this:
+<img width="300" height="!" alt="13352" src="https://github.com/user-attachments/assets/66c5429f-dabe-48bb-87b5-3d437e4a503b" />
+<img width="300" height="!" alt="13353" src="https://github.com/user-attachments/assets/618e5fbe-e058-4049-8c10-51265f987f64" />
+<img width="300" height="!" alt="13354" src="https://github.com/user-attachments/assets/24f64b28-8040-4b46-b8f4-c7d032e5b0e0" />
+
+Then, asemble the two pieces(pan/tilt with camera) together like this:
+
+<img width="300" height="!" alt="13358" src="https://github.com/user-attachments/assets/d8e340bb-4a12-4730-a808-f4228853da76" />
+<img width="300" height="!" alt="13360" src="https://github.com/user-attachments/assets/6a5fa599-013f-40fa-a31a-cf05199e44dd" />
+<img width="300" height="!" alt="13361" src="https://github.com/user-attachments/assets/1d807685-d948-48af-b017-9df94a2a4b75" />
+
+After that, you can assemble the pan/tilt section with the servo motor on the main body. And after you do the wiring that i explain bellow, it should look like this: 
+
+<img width="500" height="!" alt="13368" src="https://github.com/user-attachments/assets/fd1b81e5-60cb-4ed0-8168-7a8e05152777" />
+<img width="500" height="!" alt="13364" src="https://github.com/user-attachments/assets/db7389b6-c23e-4c48-8012-ae80ee2907bb" />
+<img width="500" height="!" alt="13363" src="https://github.com/user-attachments/assets/409ee6bb-95c8-43bd-872a-c11db1b390df" />
+<img width="500" height="!" alt="13366" src="https://github.com/user-attachments/assets/cf7a37b6-8b86-4cb1-b37b-b825f81c0ffc" />
+<img width="500" height="!" alt="13365" src="https://github.com/user-attachments/assets/eee1d6bf-1487-4642-8acc-20ebdad87f18" />
+
+
+
+
+
+
+
+
 
 
 
