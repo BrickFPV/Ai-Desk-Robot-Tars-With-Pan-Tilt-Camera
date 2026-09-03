@@ -2,6 +2,15 @@
 I wanted to create a sarcastic desk robot inspired from interstellar that you can ask things, chat with it, ask what is going on with the enviroment via camera that he can look around with 2 servos. And here it is. I didn't made a 3d printed case for it, I used lego technic to make a chasis. Now, here is step by step guide on how to make this robot:
 
 
+## Features
+
+- 🎤**Voice Interaction:** Low-latency STT via Whisper-large-v3-turbo and Orpheus TTS via Groq.
+- 📸**Vision Recognition:** Qwen 2.5 72B vision integration to analyze camera input upon voice triggers.
+- ⚙️ **Servo Control:** Smooth pan/tilt tracking via PCA9685 PWM driver board.
+- 🌐**Web Search Integration:** Real-time information querying via DuckDuckGo Search API.
+- 🔊**Pre-recorded Local Acknowledgments:** Pre-generated TTS wake-word acknowledgments to save API quota.
+
+
 ## **🔌 Needed Hardware**
 
 - Raspberry Pi 4 1gb(Any other raspberry pi with atleast 1gb ram should work. I recommend having a heatsink or a cooler fan)
@@ -143,6 +152,14 @@ If the potentiometer on the MT3608 doesn't change the output voltage, add a sold
 
 ## Setup
 
+Assuming that you have raspberry pi os flashed and ready, first, run this command to install system audio and camera dependencies:
+
+sudo apt update
+sudo apt install -y python3-dev portaudio19-dev libasound2-dev alsa-utils ffmpeg
+
+Then, install the needed libraries:
+
+pip install groq pyaudio opencv-python numpy duckduckgo-search adafruit-circuitpython-servokit
 
 
  
