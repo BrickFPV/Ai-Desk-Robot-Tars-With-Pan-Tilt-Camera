@@ -1,27 +1,24 @@
 # Tars AI Desk Robot
-I wanted to create a desk robot that you can ask things, chat with it, ask what is going on with the enviroment via camera that he can look around with 2 servos. And here it is. I didn't made a 3d printed case for it, I used lego technic to make a chasis. I am planing to share the lego file soon. Now, here is step by step guide on how to make this robot:
+I wanted to create a desk robot that you can ask things, chat with it, ask what is going on with the enviroment via camera that he can look around with 2 servos. And here it is. I didn't made a 3d printed case for it, I used lego technic to make a chasis. Now, here is step by step guide on how to make this robot:
 
 
 ## **🔌 Needed Hardware**
 
-- Raspberry Pi 4 1gb(Any other raspberry pi with atleast 1gb ram should work)
-- Logitech web cam(C270 to be exact but you can use any webcam that has a mic.)
+- Raspberry Pi 4 1gb(Any other raspberry pi with atleast 1gb ram should work. I recommend having a heatsink or a cooler fan)
+- Web cam(I used Logitech C270 but you can use any webcam that has a mic.)
 - 2 Sg90 Servo Motors
 - PCA9685 for controlling the servos
 - 1s Lipo or 18650 li-on battery or a trustable 5V power source.
 - MT3608(set the output to 5/5,1 volts) if you are using a lipo or 18650 because they output 4.2V max.(Look at **How to fix MT3608** part if the potentiometer on the board doesn't change the output voltage)
 - MAX98357A amplifier
 - Small speaker for the amp
+- 3D printed parts. Download links will be in the **Downloadables** folder.
+- Lego techinc to make the chasis. The lego model will be in the **Downloadables** folder. (i would be pleased if someone makes a 3d printed chasis)
+  
 
 
-## **🔧 How to fix MT3608**
 
-If the potentiometer on the MT3608 doesn't change the output voltage, add a solder bridge at the back of the board as shown on the picture.
-
-<img width="890" height="442" alt="mt fix" src="https://github.com/user-attachments/assets/506ada10-7514-42bf-a105-8146ea34c411" />
-
-
-## **🪛 Wiring**
+## **⚡ Wiring**
 
 Here is the Raspberry pi 4 pinout to make things easier.
 <img width="2064" height="1185" alt="GPIO-Pinout-Diagram-2" src="https://github.com/user-attachments/assets/fa54dea6-1ea0-4ec2-be7b-4d2bfb1a8ce0" />
@@ -68,9 +65,26 @@ Output - = Speaker -
 
  Pan Servo motor = The 3 pins on the very left(Match the colors)
  
- Tilt Servo motor = The 3 pins right next to the pan servo motor pins(Match the colors)<img width="1001" height="1001" alt="servo" src="https://github.com/user-attachments/assets/ac3df470-3039-435e-bc2c-a505fe9639f5" />
+ Tilt Servo motor = The 3 pins right next to the pan servo motor pins(Match the colors)<img width="1001" height="1001" alt="servo" src="https://github.com/user-attachments/assets/df7c4a65-417b-444d-8c6d-92fa6eea9670" />
+
 
 
  ### ----------------------📷 Wiring for the usb webcam---------------
 
- Just plug it to the raspberry pi :)
+ Just plug the usb to the raspberry pi :)
+
+
+
+
+## **🔧 How to fix MT3608**
+
+If the potentiometer on the MT3608 doesn't change the output voltage, add a solder bridge at the back of the board as shown on the picture.
+
+<img width="890" height="442" alt="mt fix" src="https://github.com/user-attachments/assets/506ada10-7514-42bf-a105-8146ea34c411" />
+
+
+##Setup##
+
+
+
+ 
