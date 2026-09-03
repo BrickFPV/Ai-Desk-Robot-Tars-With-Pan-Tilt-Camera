@@ -14,6 +14,13 @@ I wanted to create a desk robot that you can ask things, chat with it, ask what 
 - Small speaker for the amp
 - 3D printed parts. Download links will be in the **Downloadables** folder.
 - Lego techinc to make the chasis. The lego model will be in the **Downloadables** folder. (i would be pleased if someone makes a 3d printed chasis)
+
+
+
+## **Setting Up The Chasis**
+
+
+First, you need to download and 3D print the stl files on /dowloadables/3dprint folder.
   
 
 
