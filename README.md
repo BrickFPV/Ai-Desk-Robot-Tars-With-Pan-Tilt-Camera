@@ -20,7 +20,7 @@ I wanted to create a desk robot that you can ask things, chat with it, ask what 
 ## **Setting Up The Chasis**
 
 
-First, you need to download and 3D print the stl files on /dowloadables/3dprint folder.
+First, you need to download and 3D print the stl files with PLA on /dowloadables/3dprint folder.
   
 
 
