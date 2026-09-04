@@ -163,7 +163,8 @@ If the potentiometer on the MT3608 doesn't change the output voltage, add a sold
 
 (I will make an installer in the future)
 
-Assuming that you have raspberry pi os flashed and ready.
+*Assuming that you have raspberry pi os flashed and ready.*
+
 
 Run the following commands in the Raspberry Pi terminal to enable the I2C interface for servo driving and install system audio/video dependencies:
 
@@ -191,8 +192,80 @@ Create the main application file inside ~/tars_robot/tars.py:
 nano tars.py
 ```
 
-Copy and paste the tars.py code from /tars.py in this repository. And replace **PLACE YOUR GROQ API KEY HERE** on **line 82** with your Groq api key and save(Ctrl+O, Enter, Ctrl+X).
+Copy and paste the tars.py code from [here](tars.py). And replace **PLACE YOUR GROQ API KEY HERE** on **line 82** with your Groq api key and save(Ctrl+O, Enter, Ctrl+X).
+
+### ⚠DON'T RUN THE CODE YET
+
+Create the generate_acks.py to generate "HUH?","YES?","THATS ME" and other bunch of words when you say "Hey Tars" and paste [this code](generate_acks.py)
+
+**Again, replace "PLACE YOUR GROQ API KEY HERE" on line 5 with your Groq api key**
+
+```
+nano generate_acks.py
+```
+
+Now, make sure you are on (venv):
+
+```
+source venv/bin/activate
+```
+
+Then, run generate_acks.py **ONE** time:
+
+```
+python generate_acks.py
+```
+
+
+Now, you can run tars.py in (venv) whenever you want:
+
+```
+python tars.py
+```
 
 
 
- 
+### Continue this guide if you want a shortcut and not get into (venv) when you want to run the code!
+
+Exit from (venv):
+
+```
+deactivate
+```
+
+Then, run this code on terminal:
+
+### ⚠Replace "REPLACE/HERE/WITH/TARS_ROBOT/DIRECTORY" with project's folder directory (tars_robot)
+
+```
+cat << 'EOF' > ~/run_tars.sh
+#!/bin/bash
+cd REPLACE/HERE/WITH/TARS_ROBOT/DIRECTORY
+source venv/bin/activate
+python tars.py
+
+echo ""
+read -p "Press [Enter] to close..."
+EOF
+
+chmod +x ~/run_tars.sh
+```
+
+Also run this code on terminal:
+
+### ⚠ Again, replace "REPLACE/HERE/WITH/TARS_ROBOT/DIRECTORY" with project's folder directory but leave the /run_tars.sh at the end (tars_robot)
+
+```
+cat << 'EOF' > ~/tars_robot/TARS.desktop
+[Desktop Entry]
+Type=Application
+Name=TARS Robot
+Comment=Start TARS Voice & Vision Assistant
+Exec=REPLACE/HERE/WITH/TARS_ROBOT/DIRECTORY/run_tars.sh
+Icon=utilities-terminal
+Terminal=true
+Categories=Development;
+EOF
+
+chmod +x ~/tars_robot/TARS.desktop
+```
