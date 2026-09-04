@@ -1,0 +1,12 @@
+cat << 'EOF' > ~/Desktop/TARS.desktop
+[Desktop Entry]
+Type=Application
+Name=TARS Robot
+Comment=Start TARS Voice & Vision Assistant
+Exec=/home/pi/run_tars.sh
+Icon=utilities-terminal
+Terminal=true
+Categories=Development;
+EOF
+
+chmod +x ~/Desktop/TARS.desktop
