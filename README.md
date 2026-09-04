@@ -163,7 +163,7 @@ If the potentiometer on the MT3608 doesn't change the output voltage, add a sold
 
 (I will make an installer in the future)
 
-*Assuming that you have raspberry pi os flashed and ready.*
+*Assuming that you have raspberry pi os flashed and ready.(With gui you can disable the gui in the future if you want)*
 
 
 Run the following commands in the Raspberry Pi terminal to enable the I2C interface for servo driving and install system audio/video dependencies:
@@ -233,39 +233,51 @@ Exit from (venv):
 deactivate
 ```
 
-Then, run this code on terminal:
-
-### ⚠Replace "REPLACE/HERE/WITH/TARS_ROBOT/DIRECTORY" with project's folder directory (tars_robot)
+Create a shell script named run_tars.sh inside your project directory:
 
 ```
-cat << 'EOF' > ~/run_tars.sh
+nano ~/run_tars.sh
+```
+
+Paste the following contents (update /home/pi/tars to your actual project folder path):
+
+```
 #!/bin/bash
-cd REPLACE/HERE/WITH/TARS_ROBOT/DIRECTORY
+cd /home/pi/tars
 source venv/bin/activate
 python tars.py
 
+# Keeps the terminal window open if the script exits or crashes
 echo ""
 read -p "Press [Enter] to close..."
-EOF
+```
 
+Make the script executable:
+
+```
 chmod +x ~/run_tars.sh
 ```
 
-Also run this code on terminal:
+Create a file named TARS.desktop in your desktop. Open it with text editor and paste this code:
 
-### ⚠ Again, replace "REPLACE/HERE/WITH/TARS_ROBOT/DIRECTORY" with project's folder directory but leave the /run_tars.sh at the end (tars_robot)
+### **Replace "YOURUSERNAME" with opperating systems username**
 
 ```
-cat << 'EOF' > ~/tars_robot/TARS.desktop
 [Desktop Entry]
 Type=Application
 Name=TARS Robot
 Comment=Start TARS Voice & Vision Assistant
-Exec=REPLACE/HERE/WITH/TARS_ROBOT/DIRECTORY/run_tars.sh
+Exec=/home/YOURUSERNAME/run_tars.sh
 Icon=utilities-terminal
 Terminal=true
 Categories=Development;
-EOF
-
-chmod +x ~/tars_robot/TARS.desktop
 ```
+
+
+Make the shortcut file executable:
+
+```
+chmod +x ~/Desktop/TARS.desktop
+```
+
+Now you can double click and launch tars easily.
