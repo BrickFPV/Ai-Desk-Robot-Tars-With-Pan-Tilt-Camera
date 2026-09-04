@@ -152,14 +152,27 @@ If the potentiometer on the MT3608 doesn't change the output voltage, add a sold
 
 ## Setup
 
-Assuming that you have raspberry pi os flashed and ready, first, run this command to install system audio and camera dependencies:
+(I will make an installer in the future)
 
+Assuming that you have raspberry pi os flashed and ready.
+
+Run the following commands in the Raspberry Pi terminal to enable the I2C interface for servo driving and install system audio/video dependencies:
+
+sudo raspi-config nonint do_i2c 0
 sudo apt update
-sudo apt install -y python3-dev portaudio19-dev libasound2-dev alsa-utils ffmpeg
+sudo apt install -y python3-pip python3-venv python3-dev portaudio19-dev libasound2-dev alsa-utils ffmpeg vlc
 
-Then, install the needed libraries:
+Then, create the project workspace and initialize a isolated Python 3 environment:
 
-pip install groq pyaudio opencv-python numpy duckduckgo-search adafruit-circuitpython-servokit
+mkdir -p ~/tars_robot && cd ~/tars_robot
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install groq opencv-python pyaudio numpy adafruit-circuitpython-servokit duckduckgo_search
+
+Create the main application file inside ~/tars_robot/tars.py:
+
+nano tars.py
 
 
  
