@@ -37,9 +37,12 @@ I wanted to create a sarcastic desk robot inspired from interstellar that you ca
 
 
 ### Step 1: 3D printing and making the servo to be able to connect with lego
-First, you need to download and 3D print the stl files (print both of them atleast 2 times because you have two servos with PLA on /dowloadables/3dprint folder.
+First, you need to download and 3D print the stl files (print both of them atleast 2 times because you have two servos with PLA [here](downloadables/3dprint).
+
 After that, you have to screw both the servos to the SG90 shell using the small screws you get when buying a sg90 servo motor.(Make sure the output side on the servo is next to the 2 holes)
-Then, put some super glue on the SG90 to lego's middle hole on the side where you can put it to sg90's output. after you put some super glue in the hole, put the Sg90-lego adapter(middle hole where you put glue on) to servo's output. Make sure to not push too much as if the glue touches the blue servo motor case, it might glue the motor output and the case and make it not moveable.
+
+Then, put some super glue on the SG90 to lego's middle hole on the side where you can put it to sg90's output. after you put some super glue in the hole, put the Sg90-lego adapter(middle hole where you put glue on) to 
+servo's output. Make sure to not push too much as if the glue touches the blue servo motor case, it might glue the motor output and the case and make it not moveable.
 
 <img width="400" height="!" alt="13336" src="https://github.com/user-attachments/assets/f285278d-41b1-4992-abe0-5b6f680de8a7" />
 <img width="400" height="!" alt="13337" src="https://github.com/user-attachments/assets/42ac4648-6d5b-41ff-ae15-c786237ed854" /> 
@@ -48,13 +51,15 @@ Then, put some super glue on the SG90 to lego's middle hole on the side where yo
 
 ### Step 2: Building the chasis
 
-Download the lego.io file on /downloadables folder. Also, download Studio 2.0 from bricklink's official website: https://store.bricklink.com/v2/studio/download.page
+Download the [lego.io](downloadables/lego.io) Also, download Studio 2.0 from bricklink's [official website](https://store.bricklink.com/v2/studio/download.page)
 You can look at the model there and improvise. You don't need to make the same thing. After making the chasis, and pan/tilt sections, fix the webcam on top of the pan section with rubber bands like this:
 <img width="300" height="!" alt="13352" src="https://github.com/user-attachments/assets/66c5429f-dabe-48bb-87b5-3d437e4a503b" />
 <img width="300" height="!" alt="13353" src="https://github.com/user-attachments/assets/618e5fbe-e058-4049-8c10-51265f987f64" />
 <img width="300" height="!" alt="13354" src="https://github.com/user-attachments/assets/24f64b28-8040-4b46-b8f4-c7d032e5b0e0" />
 
+
 Then, asemble the two pieces(pan/tilt with camera) together like this:
+
 
 <img width="300" height="!" alt="13358" src="https://github.com/user-attachments/assets/d8e340bb-4a12-4730-a808-f4228853da76" />
 <img width="300" height="!" alt="13360" src="https://github.com/user-attachments/assets/6a5fa599-013f-40fa-a31a-cf05199e44dd" />
@@ -150,7 +155,11 @@ If the potentiometer on the MT3608 doesn't change the output voltage, add a sold
 <img width="890" height="442" alt="mt fix" src="https://github.com/user-attachments/assets/506ada10-7514-42bf-a105-8146ea34c411" />
 
 
-## Setup
+## 🚀Setup
+
+### Notes before we begin
+#### *Get a free api key [here](https://groq.com)*
+#### *Make sure you have [Raspberry Pi Connect](https://connect.raspberrypi.com) ready to make things easier*
 
 (I will make an installer in the future)
 
@@ -158,23 +167,32 @@ Assuming that you have raspberry pi os flashed and ready.
 
 Run the following commands in the Raspberry Pi terminal to enable the I2C interface for servo driving and install system audio/video dependencies:
 
+```
 sudo raspi-config nonint do_i2c 0
 sudo apt update
 sudo apt install -y python3-pip python3-venv python3-dev portaudio19-dev libasound2-dev alsa-utils ffmpeg vlc
+```
 
-Then, create the project workspace and initialize a isolated Python 3 environment:
+Then, create the project workspace and install the libraries:
 
+
+```
 mkdir -p ~/tars_robot && cd ~/tars_robot
 python3 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
 pip install groq opencv-python pyaudio numpy adafruit-circuitpython-servokit duckduckgo_search
+```
+
 
 Create the main application file inside ~/tars_robot/tars.py:
 
+```
 nano tars.py
+```
 
-Copy and paste then tars.py code from /tars.py in this repository.
+Copy and paste the tars.py code from /tars.py in this repository. And replace **PLACE YOUR GROQ API KEY HERE** on **line 82** with your Groq api key and save(Ctrl+O, Enter, Ctrl+X).
+
 
 
  
