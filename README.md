@@ -174,5 +174,7 @@ Create the main application file inside ~/tars_robot/tars.py:
 
 nano tars.py
 
+Copy and paste then tars.py code from /tars.py in this repository.
+
 
  
