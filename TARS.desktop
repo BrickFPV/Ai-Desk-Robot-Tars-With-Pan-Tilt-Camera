@@ -3,7 +3,7 @@ cat << 'EOF' > ~/Desktop/TARS.desktop
 Type=Application
 Name=TARS Robot
 Comment=Start TARS Voice & Vision Assistant
-Exec=/home/pi/run_tars.sh
+Exec=PUT/PROJECT'S/DIRECTORY/HERE
 Icon=utilities-terminal
 Terminal=true
 Categories=Development;
