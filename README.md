@@ -1,6 +1,8 @@
 # Tars AI Desk Robot
 I wanted to create a sarcastic desk robot inspired from interstellar and also inspired from [Gptars on Youtube](https://www.youtube.com/@gptars) that you can ask things, chat with it, ask what is going on with the enviroment via camera that he can look around with 2 servos. And here it is. I didn't made a 3d printed case for it, I used lego technic to make a chasis. Total cost is about 80 dolars Now, here is step by step guide on how to make this robot:
 
+### Please note that I haven't finished this project yet. So there might be some bugs.
+
 
 ## Features
 
